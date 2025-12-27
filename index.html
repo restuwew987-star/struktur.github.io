@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Struktur Medis INDOSTAR</title>
+
+<style>
+:root{
+    --bg:#090d18;
+    --panel:#0f1626;
+    --line:#1d2945;
+    --text:#e9edf5;
+    --muted:#9fb0c8;
+
+    --rgb1:#4aa3ff;
+    --rgb2:#7cffc4;
+    --rgb3:#b07cff;
+}
+
+*{
+    box-sizing:border-box;
+    font-family:"Segoe UI", system-ui, Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:40px 16px;
+    background:
+      radial-gradient(circle at top right, rgba(176,124,255,.12), transparent 40%),
+      radial-gradient(circle at bottom left, rgba(124,255,196,.12), transparent 40%),
+      var(--bg);
+    color:var(--text);
+}
+
+.panel{
+    max-width:880px;
+    margin:auto;
+    background:linear-gradient(180deg, #10192b, #0c1323);
+    border-radius:18px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* RGB BORDER HALUS */
+.panel::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    padding:1.5px;
+    background:linear-gradient(135deg, var(--rgb1), var(--rgb2), var(--rgb3));
+    border-radius:18px;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+}
+
+/* HEADER */
+.header{
+    position:relative;
+    padding:26px;
+    border-bottom:1px solid var(--line);
+}
+
+.header h1{
+    margin:0;
+    font-size:28px;
+    letter-spacing:1px;
+}
+
+.header small{
+    color:var(--muted);
+    letter-spacing:1px;
+}
+
+/* SECTION */
+.section{
+    padding:24px 26px;
+}
+
+.section-title{
+    font-size:14px;
+    letter-spacing:1.4px;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--rgb1);
+}
+
+.section-title::before{
+    content:"";
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--rgb1), var(--rgb3));
+}
+
+/* ROLE CARD */
+.card{
+    background:rgba(18,27,47,.85);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px 16px 18px;
+    margin-bottom:14px;
+    position:relative;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    left:16px;
+    right:16px;
+    bottom:0;
+    height:2px;
+    background:linear-gradient(90deg, transparent, var(--rgb1), transparent);
+    opacity:.6;
+}
+
+.role{
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.4px;
+}
+
+.desc{
+    margin-top:6px;
+    font-size:13px;
+    line-height:1.6;
+    color:var(--muted);
+}
+
+/* FOOTER */
+.footer{
+    border-top:1px solid var(--line);
+    padding:18px;
+    text-align:center;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+    <div class="header">
+        <h1>STRUKTUR MEDIS</h1>
+        <small>INDOSTAR ROLEPLAY</small>
+    </div>
+
+    <div class="section">
+        <div class="section-title">ORGANISASI MEDIS</div>
+
+        <div class="card">
+            <div class="role">1. Direktur Utama</div>
+            <div class="desc">Bertanggung jawab atas keseluruhan manajemen dan strategi organisasi medis.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">2. Wadir Utama</div>
+            <div class="desc">Membantu Direktur Utama dalam pengawasan operasional dan administrasi.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">3. Direktur Keilmuan</div>
+            <div class="desc">Mengelola program pendidikan, penelitian, dan standar keilmuan medis.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">4. Direktur SDM</div>
+            <div class="desc">Bertanggung jawab atas manajemen sumber daya manusia, rekrutmen, dan kesejahteraan staf medis.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">5. Sekretaris Bengkel (Sekben)</div>
+            <div class="desc">Mengatur administrasi internal, koordinasi antar departemen, dan dokumentasi resmi.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">6. Komisi Umum</div>
+            <div class="desc">Mengawasi kegiatan umum, termasuk regulasi, prosedur, dan implementasi kebijakan.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">7. Komisi Disiplin</div>
+            <div class="desc">Menegakkan aturan, menilai pelanggaran, dan memberikan sanksi sesuai peraturan internal.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">8. Dokter Spesialis</div>
+            <div class="desc">Memberikan layanan medis khusus sesuai bidang keahlian.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">9. Dokter Umum</div>
+            <div class="desc">Memberikan layanan medis dasar, pemeriksaan rutin, dan konsultasi kesehatan umum.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">10. Perawat</div>
+            <div class="desc">Mendukung layanan medis, merawat pasien, dan membantu prosedur medis.</div>
+        </div>
+
+        <div class="card">
+            <div class="role">11. Trainee</div>
+            <div class="desc">Belajar dan berlatih di bawah bimbingan tenaga medis profesional.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        PROFESSIONAL • HUMANIS • REALISTIS
+    </div>
+
+</div>
+
+</body>
+</html>
